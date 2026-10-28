@@ -31,7 +31,8 @@ final class ViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction func didTapLogInButton(_ sender: UIButton) {
-        guard saveUserSwitch.isOn else { return UserDefaults.standard.removeObject(forKey: savedUserNameKey) }
+        guard saveUserSwitch.isOn else { UserDefaults.standard.removeObject(forKey: savedUserNameKey)
+            return }
         if let text = userTextInput.text {
             UserDefaults.standard.set(text, forKey: savedUserNameKey)
         }
