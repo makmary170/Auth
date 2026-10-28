@@ -13,31 +13,28 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var passwordTextInput: UITextField!
     @IBOutlet private weak var userTextInput: UITextField!
     @IBOutlet private weak var logInButton: UIButton!
-    @IBOutlet private weak var saveSwitchUser: UISwitch!
+    @IBOutlet private weak var saveUserSwitch: UISwitch!
 
 
     // MARK: - Constants
+    private let savedUserNameKey: String = "savedUserNameKey"
 
-    private var savedUserNameKey: String = "savedUserNameKey"
+    // MARK: - Properties
     private var userName = ""
-
-    // MARK: - IBActions
-    @IBAction func didTapLogInButton(_ sender: UIButton) {
-        guard saveSwitchUser.isOn else { return }
-        if let text = userTextInput.text {
-            UserDefaults.standard.set(text, forKey: savedUserNameKey)
-        }
-
-    }
-
-    @IBAction func didSwitchSaveUser(_ sender: UISwitch) {
-    }
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userName = UserDefaults.standard.string(forKey: savedUserNameKey) ?? String()
+        userName = UserDefaults.standard.string(forKey: savedUserNameKey) ?? ""
         userTextInput.text = userName
+    }
+
+    // MARK: - IBActions
+    @IBAction func didTapLogInButton(_ sender: UIButton) {
+        guard saveUserSwitch.isOn else { return }
+        if let text = userTextInput.text {
+            UserDefaults.standard.set(text, forKey: savedUserNameKey)
+        }
     }
 }
 

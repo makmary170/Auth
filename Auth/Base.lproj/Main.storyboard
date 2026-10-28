@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-3s-kfA">
-                                <rect key="frame" x="40" y="270" width="303" height="195"/>
+                                <rect key="frame" x="40" y="270" width="303" height="152"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnS-kl-tbW" userLabel="Username">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="23"/>
@@ -39,19 +39,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-0e-4fz" userLabel="User">
-                                        <rect key="frame" x="0.0" y="86" width="303" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySt-2x-Vjd">
-                                        <rect key="frame" x="0.0" y="129" width="303" height="23"/>
+                                        <rect key="frame" x="0.0" y="86" width="303" height="23"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM5-sh-Fq2" userLabel="Password">
-                                        <rect key="frame" x="0.0" y="172" width="303" height="23"/>
+                                        <rect key="frame" x="0.0" y="129" width="303" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
@@ -78,7 +73,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-JW-wAz">
-                                <rect key="frame" x="40" y="530" width="303" height="28"/>
+                                <rect key="frame" x="40" y="487" width="303" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-pR-ROB">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="28"/>
@@ -88,9 +83,6 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Remember me" translatesAutoresizingMaskIntoConstraints="NO" id="AOo-Fa-swb">
                                         <rect key="frame" x="242" y="0.0" width="63" height="28"/>
-                                        <connections>
-                                            <action selector="didSwitchSaveUser:" destination="BYZ-38-t0r" eventType="valueChanged" id="TXt-jC-Oke"/>
-                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -115,7 +107,7 @@
                     <connections>
                         <outlet property="logInButton" destination="Vb7-j7-emO" id="sjZ-Xd-PTX"/>
                         <outlet property="passwordTextInput" destination="cM5-sh-Fq2" id="QRr-ue-Y7q"/>
-                        <outlet property="saveSwitchUser" destination="AOo-Fa-swb" id="Yo3-8a-Igt"/>
+                        <outlet property="saveUserSwitch" destination="AOo-Fa-swb" id="Yo3-8a-Igt"/>
                         <outlet property="userTextInput" destination="28v-ab-Dsp" id="2fl-sA-CcW"/>
                     </connections>
                 </viewController>
