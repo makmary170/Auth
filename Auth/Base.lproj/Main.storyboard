@@ -41,7 +41,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28v-ab-Dsp" userLabel="User">
                                         <rect key="frame" x="0.0" y="43" width="303" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySt-2x-Vjd">
                                         <rect key="frame" x="0.0" y="86" width="303" height="23"/>
@@ -52,7 +52,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-Pd-4l7" userLabel="Password">
                                         <rect key="frame" x="0.0" y="129" width="303" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -73,17 +73,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-JW-wAz">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-JW-wAz">
                                 <rect key="frame" x="40" y="487" width="303" height="28"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remeber me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-pR-ROB">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-pR-ROB">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Remember me" translatesAutoresizingMaskIntoConstraints="NO" id="AOo-Fa-swb">
-                                        <rect key="frame" x="242.33333333333329" y="0.0" width="62.666666666666657" height="28"/>
+                                        <rect key="frame" x="242" y="0.0" width="63" height="28"/>
                                     </switch>
                                 </subviews>
                             </stackView>
