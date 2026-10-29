@@ -7,13 +7,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet private weak var passwordTextInput: UITextField!
+    @IBOutlet private weak var userTextInput: UITextField!
+    @IBOutlet private weak var logInButton: UIButton!
+    @IBOutlet private weak var saveUserSwitch: UISwitch!
+
+
+    // MARK: - Constants
+    private let savedUserNameKey: String = "savedUserNameKey"
+
+    // MARK: - Properties
+    private var userName = ""
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        userName = UserDefaults.standard.string(forKey: savedUserNameKey) ?? ""
+        userTextInput.text = userName
     }
 
-
+    // MARK: - IBActions
+    @IBAction func didTapLogInButton(_ sender: UIButton) {
+        guard saveUserSwitch.isOn else { UserDefaults.standard.removeObject(forKey: savedUserNameKey)
+            return }
+        if let text = userTextInput.text {
+            UserDefaults.standard.set(text, forKey: savedUserNameKey)
+        }
+    }
 }
 
